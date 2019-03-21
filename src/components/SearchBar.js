@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 
 class SearchBar extends Component{
 
-
+    
     state = {
         term:''
     };
     
-    onFormSubmitHandler(event){
+    onFormSubmitHandler=(event)=>{
         event.preventDefault();
         console.log(this.state.term);
     }
     
     render(){
+       
         return(
         <div className="ui segment" >
            <form className="ui form" onSubmit={this.onFormSubmitHandler}>
