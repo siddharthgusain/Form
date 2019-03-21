@@ -6,14 +6,6 @@ import ImageList from './ImageList';
 class App extends Component{
 
 
-    constructor(props){
-      super(props);
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (pos)=>console.log(pos)
-        );
-      } 
-    }
     state={
         images:[]
         
@@ -25,12 +17,10 @@ class App extends Component{
            params:{ query: term },
         });
       
-      this.setState({images:response.data.results,search:term});
+      this.setState({images:response.data.results});
       
        
     }
-
-    
 
     render(){
 
