@@ -5,6 +5,15 @@ import ImageList from './ImageList';
 
 class App extends Component{
 
+
+    constructor(props){
+      super(props);
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos)=>console.log(pos)
+        );
+      } 
+    }
     state={
         images:[]
         
@@ -20,6 +29,8 @@ class App extends Component{
       
        
     }
+
+    
 
     render(){
 
